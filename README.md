@@ -49,7 +49,7 @@ CIMForge replaces the entire manual pipeline with a single button press.
       │
       ▼   Enter sourcetype + data model
   ┌─────────────────────────────────────────────────────┐
-  │            CIMForge Agentic Operations Console        │
+  │            CIMForge Agentic Operations Console      │
   │                                                     │
   │  ● MCP Agent ──▶ ● SAIA Agent ──▶ ● Security Agent ──▶ ● TA Packaging Agent │
   │                                                     │
@@ -256,7 +256,7 @@ The entire pipeline — harvest, analyze, map, validate, scan, package, report �
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    CIMForge — System Architecture                    │
+│                    CIMForge — System Architecture                   │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
 │   Browser                                                           │
@@ -269,8 +269,8 @@ The entire pipeline — harvest, analyze, map, validate, scan, package, report �
 │   │  ├── ExecutiveSummary.jsx      ← KPI cards                   │  │
 │   │  └── BusinessImpactCard.jsx    ← ROI metrics                 │  │
 │   └──────────────────────────────────────────────────────────────┘  │
-│                           │  POST /cimforge_generate               │
-│   Splunk Web (port 8000)  │  /en-US/splunkd/__raw/servicesNS/...   │
+│                           │  POST /cimforge_generate                │
+│   Splunk Web (port 8000)  │  /en-US/splunkd/__raw/servicesNS/...    │
 │   ┌──────────────────────────────────────────────────────────────┐  │
 │   │  PersistentServerConnectionApplication (Python 3.9)          │  │
 │   │                                                              │  │
