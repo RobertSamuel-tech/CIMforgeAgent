@@ -395,3 +395,9 @@ Apache License 2.0 — see [`cimforge/LICENSES/Apache License 2.0.txt`](cimforge
 *From raw logs to deployable Splunk TA. One click. Under 30 seconds.*
 
 </div>
+
+---
+
+## Track
+
+Platform & Developer Experience — Splunk Agentic Ops Hackathon 2026
