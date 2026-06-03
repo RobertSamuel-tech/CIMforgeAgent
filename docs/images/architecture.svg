@@ -1,0 +1,309 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" style="font-family:'Segoe UI',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1117;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#161B22;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="mcpGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1C2B3A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#112233;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="saiaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E2A1A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0F1F0A;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="secGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2A1A1A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1F0A0A;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="sdkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#231A2E;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#150A1F;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow-yellow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-green">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#58A6FF" opacity="0.8"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#484F58" opacity="0.8"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#65A637" opacity="0.9"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Outer border -->
+  <rect x="1" y="1" width="898" height="618" fill="none" stroke="#30363D" stroke-width="1" rx="12"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="900" height="52" fill="#161B22" rx="12"/>
+  <rect x="0" y="40" width="900" height="12" fill="#161B22"/>
+  <rect x="0" y="51" width="900" height="1" fill="#30363D"/>
+
+  <!-- Title -->
+  <text x="450" y="22" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700" letter-spacing="1">CIMForge — System Architecture</text>
+  <text x="450" y="40" text-anchor="middle" fill="#8B949E" font-size="10.5" letter-spacing="0.5">Autonomous CIM Onboarding · Four-Agent Pipeline · Splunk Native</text>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- BROWSER LAYER -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="20" y="66" width="860" height="110" rx="8" fill="#0D1117" stroke="#21262D" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="20" y="66" width="860" height="26" rx="8" fill="#161B22"/>
+  <rect x="20" y="80" width="860" height="12" fill="#161B22"/>
+  <rect x="20" y="91" width="860" height="1" fill="#21262D"/>
+  <text x="36" y="83" fill="#58A6FF" font-size="10" font-weight="700" letter-spacing="1">BROWSER</text>
+  <text x="110" y="83" fill="#484F58" font-size="9.5">React 18 · Splunk React UI v5 · Webpack 5</text>
+
+  <!-- Browser components -->
+  <rect x="36" y="99" width="155" height="66" rx="5" fill="#161B22" stroke="#21262D" stroke-width="1"/>
+  <text x="113" y="115" text-anchor="middle" fill="#E6EDF3" font-size="9" font-weight="600">CIMforgeAgentSection</text>
+  <text x="113" y="128" text-anchor="middle" fill="#8B949E" font-size="8">State owner · forge lifecycle</text>
+  <rect x="44" y="133" width="139" height="1" fill="#21262D"/>
+  <text x="52" y="146" fill="#8B949E" font-size="7.5">sourcetype · targetDatamodel</text>
+  <text x="52" y="157" fill="#8B949E" font-size="7.5">agenticLogs · configOutput</text>
+
+  <rect x="207" y="99" width="130" height="66" rx="5" fill="#161B22" stroke="#21262D" stroke-width="1"/>
+  <text x="272" y="115" text-anchor="middle" fill="#E6EDF3" font-size="9" font-weight="600">MissionControlPanel</text>
+  <text x="272" y="128" text-anchor="middle" fill="#8B949E" font-size="8">4 agent status cards</text>
+  <rect x="215" y="133" width="114" height="1" fill="#21262D"/>
+  <circle cx="225" cy="146" r="3.5" fill="#FFB800" filter="url(#glow-yellow)"/>
+  <text x="234" y="149" fill="#FFB800" font-size="7.5">Active — pulsing border</text>
+  <circle cx="225" cy="158" r="3.5" fill="#65A637" filter="url(#glow-green)"/>
+  <text x="234" y="161" fill="#65A637" font-size="7.5">Complete — green glow</text>
+
+  <rect x="353" y="99" width="130" height="66" rx="5" fill="#161B22" stroke="#21262D" stroke-width="1"/>
+  <text x="418" y="115" text-anchor="middle" fill="#E6EDF3" font-size="9" font-weight="600">DependencyGraph</text>
+  <text x="418" y="128" text-anchor="middle" fill="#8B949E" font-size="8">Animated SVG pipeline</text>
+  <rect x="361" y="133" width="114" height="1" fill="#21262D"/>
+  <text x="369" y="146" fill="#8B949E" font-size="7.5">Stage: null → mcp → saia</text>
+  <text x="369" y="157" fill="#8B949E" font-size="7.5">→ security → sdk → done</text>
+
+  <rect x="499" y="99" width="130" height="66" rx="5" fill="#161B22" stroke="#21262D" stroke-width="1"/>
+  <text x="564" y="115" text-anchor="middle" fill="#E6EDF3" font-size="9" font-weight="600">ExecutiveSummary</text>
+  <text x="564" y="128" text-anchor="middle" fill="#8B949E" font-size="8">KPI cards on DONE</text>
+  <rect x="507" y="133" width="114" height="1" fill="#21262D"/>
+  <text x="515" y="146" fill="#8B949E" font-size="7.5">96% automation score</text>
+  <text x="515" y="157" fill="#8B949E" font-size="7.5">94% CIM field coverage</text>
+
+  <rect x="645" y="99" width="220" height="66" rx="5" fill="#161B22" stroke="#21262D" stroke-width="1"/>
+  <text x="755" y="115" text-anchor="middle" fill="#E6EDF3" font-size="9" font-weight="600">BusinessImpactCard + SponsorBadgeBar</text>
+  <text x="755" y="128" text-anchor="middle" fill="#8B949E" font-size="8">ROI metrics · technology badges</text>
+  <rect x="653" y="133" width="204" height="1" fill="#21262D"/>
+  <text x="661" y="146" fill="#8B949E" font-size="7.5">2.5 hrs saved per sourcetype</text>
+  <text x="661" y="157" fill="#8B949E" font-size="7.5">14 manual tasks eliminated</text>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- HTTP arrow -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <line x1="450" y1="177" x2="450" y2="207" stroke="#58A6FF" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowBlue)" opacity="0.7"/>
+  <rect x="335" y="186" width="230" height="14" rx="3" fill="#0D1117"/>
+  <text x="450" y="196" text-anchor="middle" fill="#58A6FF" font-size="8.5">POST /cimforge_generate  ·  Splunk REST API (port 8000)</text>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SPLUNK BACKEND LAYER -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="20" y="208" width="860" height="84" rx="8" fill="#0D1117" stroke="#21262D" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="20" y="208" width="860" height="26" rx="8" fill="#161B22"/>
+  <rect x="20" y="222" width="860" height="12" fill="#161B22"/>
+  <rect x="20" y="233" width="860" height="1" fill="#21262D"/>
+  <text x="36" y="225" fill="#FFB800" font-size="10" font-weight="700" letter-spacing="1">SPLUNK BACKEND</text>
+  <text x="136" y="225" fill="#484F58" font-size="9.5">Python 3.9 · PersistentServerConnectionApplication · UCC Framework</text>
+
+  <!-- Backend files -->
+  <rect x="36" y="240" width="160" height="42" rx="5" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="116" y="254" text-anchor="middle" fill="#E6EDF3" font-size="8.5" font-weight="600">cimforge_generate.py</text>
+  <text x="116" y="266" text-anchor="middle" fill="#FFB800" font-size="7.5">Agentic orchestration</text>
+  <text x="116" y="276" text-anchor="middle" fill="#484F58" font-size="7">POST /cimforge_generate</text>
+
+  <rect x="212" y="240" width="145" height="42" rx="5" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="284" y="254" text-anchor="middle" fill="#E6EDF3" font-size="8.5" font-weight="600">ai_detection.py</text>
+  <text x="284" y="266" text-anchor="middle" fill="#65A637" font-size="7.5">LLM field extraction</text>
+  <text x="284" y="276" text-anchor="middle" fill="#484F58" font-size="7">POST /ai_detection</text>
+
+  <rect x="373" y="240" width="145" height="42" rx="5" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="445" y="254" text-anchor="middle" fill="#E6EDF3" font-size="8.5" font-weight="600">cim_mapping.py</text>
+  <text x="445" y="266" text-anchor="middle" fill="#65A637" font-size="7.5">LLM CIM mapping</text>
+  <text x="445" y="276" text-anchor="middle" fill="#484F58" font-size="7">POST /cim_mapping</text>
+
+  <rect x="534" y="240" width="145" height="42" rx="5" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="606" y="254" text-anchor="middle" fill="#E6EDF3" font-size="8.5" font-weight="600">pii_detection.py</text>
+  <text x="606" y="266" text-anchor="middle" fill="#E74C3C" font-size="7.5">scrubadub · Presidio</text>
+  <text x="606" y="276" text-anchor="middle" fill="#484F58" font-size="7">POST /pii_detection</text>
+
+  <rect x="695" y="240" width="170" height="42" rx="5" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="780" y="254" text-anchor="middle" fill="#E6EDF3" font-size="8.5" font-weight="600">cimforge_report_pdf.py</text>
+  <text x="780" y="266" text-anchor="middle" fill="#9B59B6" font-size="7.5">reportlab executive PDF</text>
+  <text x="780" y="276" text-anchor="middle" fill="#484F58" font-size="7">Auto-generated on DONE</text>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- AGENT PIPELINE SECTION LABEL -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <text x="450" y="316" text-anchor="middle" fill="#8B949E" font-size="9" letter-spacing="2">— FOUR-AGENT PIPELINE —</text>
+
+  <!-- Pipeline flow arrows between agents -->
+  <!-- Raw Logs → MCP -->
+  <line x1="136" y1="393" x2="194" y2="393" stroke="#58A6FF" stroke-width="1.5" marker-end="url(#arrowBlue)" opacity="0.8"/>
+  <!-- MCP → SAIA -->
+  <line x1="316" y1="393" x2="354" y2="393" stroke="#65A637" stroke-width="1.5" marker-end="url(#arrowGreen)" opacity="0.8"/>
+  <!-- SAIA → SEC -->
+  <line x1="476" y1="393" x2="514" y2="393" stroke="#65A637" stroke-width="1.5" marker-end="url(#arrowGreen)" opacity="0.8"/>
+  <!-- SEC → SDK -->
+  <line x1="636" y1="393" x2="674" y2="393" stroke="#65A637" stroke-width="1.5" marker-end="url(#arrowGreen)" opacity="0.8"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- RAW LOGS INPUT -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="30" y="360" width="106" height="66" rx="7" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+  <text x="83" y="382" text-anchor="middle" fill="#8B949E" font-size="8" font-weight="700" letter-spacing="1">INPUT</text>
+  <text x="83" y="396" text-anchor="middle" fill="#58A6FF" font-size="9" font-weight="600">Raw Logs</text>
+  <text x="83" y="408" text-anchor="middle" fill="#484F58" font-size="7.5">sourcetype +</text>
+  <text x="83" y="418" text-anchor="middle" fill="#484F58" font-size="7.5">data model</text>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- MCP AGENT -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="196" y="330" width="158" height="126" rx="7" fill="url(#mcpGrad)" stroke="#58A6FF" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="196" y="330" width="158" height="28" rx="7" fill="#1C2B3A"/>
+  <rect x="196" y="346" width="158" height="12" fill="#1C2B3A"/>
+  <rect x="196" y="357" width="158" height="1" fill="#1F3B52"/>
+  <text x="228" y="349" fill="#58A6FF" font-size="9.5" font-weight="800">[MCP]</text>
+  <text x="270" y="349" fill="#8B949E" font-size="8.5">MCP Harvester</text>
+  <text x="275" y="370" text-anchor="middle" fill="#E6EDF3" font-size="8" font-weight="600">Telemetry Harvest</text>
+  <text x="275" y="383" text-anchor="middle" fill="#8B949E" font-size="7.5">Splunk Search API</text>
+  <text x="275" y="395" text-anchor="middle" fill="#8B949E" font-size="7.5">splunklib.client</text>
+  <rect x="210" y="402" width="130" height="1" fill="#1F3B52"/>
+  <text x="216" y="414" fill="#484F58" font-size="7">IN:  sourcetype, index</text>
+  <text x="216" y="425" fill="#484F58" font-size="7">OUT: 20 raw event samples</text>
+  <circle cx="344" cy="393" r="4" fill="#58A6FF" opacity="0.6"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SAIA AGENT -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="356" y="330" width="158" height="126" rx="7" fill="url(#saiaGrad)" stroke="#65A637" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="356" y="330" width="158" height="28" rx="7" fill="#1E2A1A"/>
+  <rect x="356" y="346" width="158" height="12" fill="#1E2A1A"/>
+  <rect x="356" y="357" width="158" height="1" fill="#2A3D1A"/>
+  <text x="385" y="349" fill="#65A637" font-size="9.5" font-weight="800">[SAIA]</text>
+  <text x="430" y="349" fill="#8B949E" font-size="8.5">SAIA Mapper</text>
+  <text x="435" y="370" text-anchor="middle" fill="#E6EDF3" font-size="8" font-weight="600">AI CIM Mapping</text>
+  <text x="435" y="383" text-anchor="middle" fill="#8B949E" font-size="7.5">OpenRouter · GPT-4</text>
+  <text x="435" y="395" text-anchor="middle" fill="#8B949E" font-size="7.5">Claude · Mistral · Ollama</text>
+  <rect x="370" y="402" width="130" height="1" fill="#2A3D1A"/>
+  <text x="376" y="414" fill="#484F58" font-size="7">IN:  raw events, CIM schema</text>
+  <text x="376" y="425" fill="#484F58" font-size="7">OUT: EXTRACT / FIELDALIAS</text>
+  <circle cx="504" cy="393" r="4" fill="#65A637" opacity="0.6"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECURITY AGENT -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="516" y="330" width="158" height="126" rx="7" fill="url(#secGrad)" stroke="#E74C3C" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="516" y="330" width="158" height="28" rx="7" fill="#2A1A1A"/>
+  <rect x="516" y="346" width="158" height="12" fill="#2A1A1A"/>
+  <rect x="516" y="357" width="158" height="1" fill="#3D1A1A"/>
+  <text x="543" y="349" fill="#E74C3C" font-size="9.5" font-weight="800">[SEC]</text>
+  <text x="588" y="349" fill="#8B949E" font-size="8.5">Security Validator</text>
+  <text x="595" y="370" text-anchor="middle" fill="#E6EDF3" font-size="8" font-weight="600">ReDoS Protection</text>
+  <text x="595" y="383" text-anchor="middle" fill="#8B949E" font-size="7.5">Cisco Foundation</text>
+  <text x="595" y="395" text-anchor="middle" fill="#8B949E" font-size="7.5">Security Model</text>
+  <rect x="530" y="402" width="130" height="1" fill="#3D1A1A"/>
+  <text x="536" y="414" fill="#484F58" font-size="7">IN:  EXTRACT- regex patterns</text>
+  <text x="536" y="425" fill="#484F58" font-size="7">OUT: Pass/fail per pattern</text>
+  <circle cx="664" cy="393" r="4" fill="#E74C3C" opacity="0.6"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SDK / TA PACKAGING AGENT -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="676" y="330" width="158" height="126" rx="7" fill="url(#sdkGrad)" stroke="#9B59B6" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="676" y="330" width="158" height="28" rx="7" fill="#231A2E"/>
+  <rect x="676" y="346" width="158" height="12" fill="#231A2E"/>
+  <rect x="676" y="357" width="158" height="1" fill="#3A1F52"/>
+  <text x="703" y="349" fill="#9B59B6" font-size="9.5" font-weight="800">[SDK]</text>
+  <text x="745" y="349" fill="#8B949E" font-size="8.5">TA Packager</text>
+  <text x="755" y="370" text-anchor="middle" fill="#E6EDF3" font-size="8" font-weight="600">TA Assembly</text>
+  <text x="755" y="383" text-anchor="middle" fill="#8B949E" font-size="7.5">Python tarfile</text>
+  <text x="755" y="395" text-anchor="middle" fill="#8B949E" font-size="7.5">UCC conventions</text>
+  <rect x="690" y="402" width="130" height="1" fill="#3A1F52"/>
+  <text x="696" y="414" fill="#484F58" font-size="7">IN:  validated config stanzas</text>
+  <text x="696" y="425" fill="#484F58" font-size="7">OUT: TA-cimforge-*.tar.gz</text>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- OUTPUT ARTIFACTS -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- Arrow down from SDK -->
+  <line x1="755" y1="457" x2="755" y2="484" stroke="#9B59B6" stroke-width="1.5" marker-end="url(#arrowGray)" opacity="0.7"/>
+
+  <!-- Arrow down from Splunk backend to OpenRouter (via SAIA) -->
+  <line x1="435" y1="457" x2="435" y2="500" stroke="#65A637" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrowGreen)" opacity="0.6"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- OUTPUTS ROW -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="30" y="484" width="370" height="80" rx="7" fill="#0D1117" stroke="#21262D" stroke-width="1"/>
+  <rect x="30" y="484" width="370" height="24" rx="7" fill="#161B22"/>
+  <rect x="30" y="496" width="370" height="12" fill="#161B22"/>
+  <rect x="30" y="507" width="370" height="1" fill="#21262D"/>
+  <text x="46" y="499" fill="#8B949E" font-size="9" font-weight="700" letter-spacing="1">AI PROVIDER</text>
+  <text x="130" y="499" fill="#484F58" font-size="8.5">OpenRouter  ·  OpenAI-compatible endpoint</text>
+
+  <rect x="46" y="514" width="100" height="40" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="96" y="529" text-anchor="middle" fill="#65A637" font-size="8" font-weight="600">GPT-4</text>
+  <text x="96" y="541" text-anchor="middle" fill="#484F58" font-size="7">OpenAI</text>
+  <text x="96" y="550" text-anchor="middle" fill="#484F58" font-size="7">via OpenRouter</text>
+
+  <rect x="158" y="514" width="100" height="40" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="208" y="529" text-anchor="middle" fill="#65A637" font-size="8" font-weight="600">Claude 3.5</text>
+  <text x="208" y="541" text-anchor="middle" fill="#484F58" font-size="7">Anthropic</text>
+  <text x="208" y="550" text-anchor="middle" fill="#484F58" font-size="7">via OpenRouter</text>
+
+  <rect x="270" y="514" width="115" height="40" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="327" y="529" text-anchor="middle" fill="#65A637" font-size="8" font-weight="600">Mistral / Ollama</text>
+  <text x="327" y="541" text-anchor="middle" fill="#484F58" font-size="7">Remote / Local</text>
+  <text x="327" y="550" text-anchor="middle" fill="#484F58" font-size="7">configurable</text>
+
+  <!-- OUTPUT ARTIFACTS box -->
+  <rect x="420" y="484" width="460" height="80" rx="7" fill="#0D1117" stroke="#21262D" stroke-width="1"/>
+  <rect x="420" y="484" width="460" height="24" rx="7" fill="#161B22"/>
+  <rect x="420" y="496" width="460" height="12" fill="#161B22"/>
+  <rect x="420" y="507" width="460" height="1" fill="#21262D"/>
+  <text x="436" y="499" fill="#8B949E" font-size="9" font-weight="700" letter-spacing="1">OUTPUT ARTIFACTS</text>
+  <text x="560" y="499" fill="#484F58" font-size="8.5">Generated in &lt; 30 seconds · Ready to deploy immediately</text>
+
+  <rect x="436" y="514" width="185" height="40" rx="4" fill="#161B22" stroke="#9B59B6" stroke-width="1"/>
+  <text x="528" y="528" text-anchor="middle" fill="#9B59B6" font-size="8" font-weight="600">TA-cimforge-{sourcetype}.tar.gz</text>
+  <text x="528" y="540" text-anchor="middle" fill="#484F58" font-size="7">props.conf · eventtypes.conf</text>
+  <text x="528" y="550" text-anchor="middle" fill="#484F58" font-size="7">tags.conf · app.conf · README.txt</text>
+
+  <rect x="635" y="514" width="230" height="40" rx="4" fill="#161B22" stroke="#9B59B6" stroke-width="1"/>
+  <text x="750" y="528" text-anchor="middle" fill="#9B59B6" font-size="8" font-weight="600">CIMForge_Report_{sourcetype}.pdf</text>
+  <text x="750" y="540" text-anchor="middle" fill="#484F58" font-size="7">Executive summary · KPI metrics</text>
+  <text x="750" y="550" text-anchor="middle" fill="#484F58" font-size="7">Agent timeline · Config with highlighting</text>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECURITY CONTROLS FOOTER -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="20" y="577" width="860" height="32" rx="6" fill="#0D1117" stroke="#21262D" stroke-width="1"/>
+  <text x="450" y="588" text-anchor="middle" fill="#484F58" font-size="8" font-weight="700" letter-spacing="1">SECURITY</text>
+  <text x="450" y="600" text-anchor="middle" fill="#484F58" font-size="7.5">API keys in Splunk encrypted credential store  ·  CSRF via X-Splunk-Form-Key  ·  Session token auth on all REST handlers  ·  PII never logged  ·  ReDoS scan before packaging</text>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- Timing badge -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <rect x="770" y="296" width="110" height="26" rx="13" fill="#FFB800" opacity="0.12" stroke="#FFB800" stroke-width="1" opacity="0.4"/>
+  <text x="825" y="313" text-anchor="middle" fill="#FFB800" font-size="9" font-weight="700">⚡ Under 30 seconds</text>
+
+  <!-- 600ms log label -->
+  <text x="450" y="475" text-anchor="middle" fill="#484F58" font-size="7.5">Logs streamed to UI at 600 ms intervals</text>
+</svg>

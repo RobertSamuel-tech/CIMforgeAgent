@@ -254,6 +254,8 @@ The entire pipeline — harvest, analyze, map, validate, scan, package, report �
 
 ## Technical Architecture
 
+![CIMForge System Architecture](docs/images/architecture.svg)
+
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
 │                    CIMForge — System Architecture                   │
