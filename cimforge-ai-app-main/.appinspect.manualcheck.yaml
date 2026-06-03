@@ -1,0 +1,50 @@
+  check_for_console_log_injection_in_javascript:
+    comment: 'Manual check'
+  check_for_iframe_in_javascript:
+    comment: 'Manual check'
+  check_for_insecure_http_request_in_javascript:
+    comment: 'Manual check'
+  check_for_remote_code_execution_in_javascript:
+    comment: 'Manual check'
+  check_for_builtin_functions:
+    comment: 'Manual check'
+  check_for_data_compression_and_archiving:
+    comment: 'Manual check'
+  check_for_file_and_directory_access:
+    comment: 'Manual check'
+  check_for_generic_operating_system_services:
+    comment: 'Manual check'
+  check_for_plain_text_credentials_in_python:
+    comment: 'Manual check'
+  check_for_environment_variable_use_in_python:
+    comment: 'Manual check'
+  check_for_insecure_http_calls_in_python:
+    comment: 'Manual check'
+  check_for_secret_disclosure:
+    comment: 'Manual check'
+  check_for_supported_tls:
+    comment: 'Manual check'
+  check_for_executable_flag:
+    comment: 'Manual check'
+  check_for_binary_files_without_source_code:
+    comment: 'Manual check'
+  check_for_importing_modules:
+    comment: 'Manual check'
+  check_all_python_files_are_well_formed:
+    comment: 'Manual check'
+  check_for_shell:
+    comment: 'Manual check'
+  check_for_optional_operating_system_services:
+    comment: 'Manual check'
+  check_python_untrusted_xml_functions:
+    comment: 'Manual check'
+  check_for_data_persistence:
+    comment: 'Manual check'
+  check_built_in_import_function:
+    comment: 'Manual check'
+  check_for_hidden_python_files:
+    comment: 'Manual check'
+  check_for_python_runtime_services:
+    comment: 'Manual check'
+  check_for_interprocess_communication_and_networking:
+    comment: 'Manual check'

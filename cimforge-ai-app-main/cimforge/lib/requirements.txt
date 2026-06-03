@@ -1,0 +1,5 @@
+splunktaucclib
+splunk-sdk==2.1.0
+solnlib
+scrubadub
+regex==2024.11.6
