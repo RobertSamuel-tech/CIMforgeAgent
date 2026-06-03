@@ -18,10 +18,6 @@ CIMForge uses four autonomous AI agents to analyze raw data, generate field extr
 
 <br/>
 
-![CIMForge Agentic Operations Console](docs/images/lowcost.png)
-
-</div>
-
 ---
 
 ## The Problem
