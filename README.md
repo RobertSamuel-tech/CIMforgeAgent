@@ -371,7 +371,7 @@ CIMForge is designed to operate in production Splunk environments where security
 
 ## License
 
-MIT License 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
