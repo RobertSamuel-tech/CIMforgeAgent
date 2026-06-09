@@ -148,4 +148,59 @@ flowchart TB
 
 ---
 
+## CIMForge — System Flow
+
+### End-to-End Data Pipeline
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  USER                                                                       │
+│                                                                             │
+│  1. Opens CIMForge in Splunk browser                                        │
+│  2. Enters:  Sourcetype = "acme_firewall"                                   │
+│              Target Data Model = "Network Traffic"                          │
+│  3. Clicks  [ Forge Configuration ]                                         │
+└───────────────────────────┬─────────────────────────────────────────────────┘
+                            │  HTTP POST
+                            │  /servicesNS/-/cimforge/cimforge_generate
+                            │  { sourcetype, target_datamodel }
+                            ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  SPLUNK REST LAYER  (cimforge_generate.py)                                  │
+│                                                                             │
+│  • Validates required fields (400 if missing)                               │
+│  • Reads AI API key from credential store                                   │
+│  • Orchestrates 4 agents sequentially                                       │
+└──────┬──────────────┬──────────────┬──────────────┬───────────────────────┘
+       │              │              │              │
+       ▼              ▼              ▼              ▼
+  ┌─────────┐   ┌──────────┐  ┌──────────┐  ┌──────────┐
+  │  [MCP]  │   │  [SAIA]  │  │  [SEC]   │  │  [SDK]   │
+  │Harvester│──▶│  Mapper  │──▶Validator │──▶ Packager │
+  └─────────┘   └──────────┘  └──────────┘  └──────────┘
+       │              │              │              │
+       ▼              ▼              ▼              ▼
+  Retrieve 20   Generate CIM   Scan regex    Package TA
+  raw events    mapping stanzas for ReDoS    .tar.gz
+  from index=*  via LLM        vulnerabilities
+```
+
+---
+
+## Pipeline Flow Diagram
+
+```mermaid
+flowchart LR
+    A[Raw Logs] --> B[MCP Agent]
+    B --> C[SAIA Agent]
+    C --> D[CORE Validator]
+    D -->|Fail| C
+    D -->|Pass| E[Security Agent]
+    E --> F[SDK Packaging Agent]
+    F --> G[Deployable TA]
+    F --> H[Executive PDF Report]
+```
+
+---
+
 *Source: [`architecture_diagram.mmd`](architecture_diagram.mmd) — render locally with `npx @mermaid-js/mermaid-cli -i architecture_diagram.mmd -o architecture_diagram.png --theme dark --backgroundColor "#0a1929" --width 2400`*
