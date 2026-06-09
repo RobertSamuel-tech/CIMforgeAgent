@@ -369,22 +369,9 @@ CIMForge is designed to operate in production Splunk environments where security
 
 ---
 
-## Documentation
-
-| Document | Contents |
-|---|---|
-| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Component map, agent specs, REST endpoints, data flow |
-| [`docs/SYSTEM_FLOW.md`](docs/SYSTEM_FLOW.md) | Beat-by-beat agent timeline, payload schema, error handling |
-| [`docs/BUILD_GUIDE.md`](docs/BUILD_GUIDE.md) | Full build, CI/CD, and packaging reference |
-| [`docs/QUICK_START.md`](docs/QUICK_START.md) | Five-minute setup guide |
-| [`docs/PRODUCT_BRIEF.md`](docs/PRODUCT_BRIEF.md) | Product positioning and feature overview |
-| [`docs/PII_DETECTION_ENDPOINT.md`](docs/PII_DETECTION_ENDPOINT.md) | PII REST API reference |
-
----
-
 ## License
 
-Apache License 2.0 — see [`cimforge/LICENSES/Apache License 2.0.txt`](cimforge/LICENSES/Apache%20License%202.0.txt)
+MIT License 
 
 ---
 
